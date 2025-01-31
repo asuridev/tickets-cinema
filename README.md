@@ -1,6 +1,6 @@
 # Prueba Técnica: Sección 3 item 11 (Sistema de reserva de tickets)
 
-Para el desarrollo de la prueba se optó por utilizar el framework spring-boot https://spring.io/projects/spring-boot
+Para el desarrollo de la prueba se optó por utilizar el framework spring-boot, dado que implementa JAVA como lenguaje de programación, soportando una alta concurrencia.
 
 El sistema desarrollado consiste en una aplicación de reserva de tickets para cine. para este fin se construyeron
 3 entidades con sus respectivas relaciones.
