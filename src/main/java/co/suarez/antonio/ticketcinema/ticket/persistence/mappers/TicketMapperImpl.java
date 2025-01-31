@@ -64,11 +64,12 @@ public class TicketMapperImpl implements TicketMapper {
             createTicketDto.getStartTime(),
             createTicketDto.getEndTime(),
             new UserEntity(
-                 user.getId(),
-                 user.getName(),
-                 user.getLastname(),
-                 user.getEmail(),
-                 user.getPhone()
+                    user.getId(),
+                    user.getName(),
+                    user.getLastname(),
+                    user.getEmail(),
+                    user.getPhone(),
+                    user.getTickets()
             ),
             new MovieEntity(
                    movie.getId(),

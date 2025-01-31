@@ -7,6 +7,7 @@ import co.suarez.antonio.ticketcinema.user.services.dtos.UpdateUserDto;
 import co.suarez.antonio.ticketcinema.user.services.dtos.UserDto;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 
 @Service
 public class UserMapperImpl implements UserMapper{
@@ -18,6 +19,7 @@ public class UserMapperImpl implements UserMapper{
             .email(userEntity.getEmail())
             .name(userEntity.getName())
             .lastname(userEntity.getLastname())
+            .tickets(userEntity.getTickets())
             .build();
   }
 
@@ -29,6 +31,7 @@ public class UserMapperImpl implements UserMapper{
             .email(userDto.getEmail())
             .name(userDto.getName())
             .lastname(userDto.getLastname())
+            .tickets(userDto.getTickets())
             .build();
   }
 
@@ -39,7 +42,8 @@ public class UserMapperImpl implements UserMapper{
             createUserDto.getName(),
             createUserDto.getLastname(),
             createUserDto.getEmail(),
-            createUserDto.getPhone()
+            createUserDto.getPhone(),
+            new ArrayList<>()
     );
   }
 
@@ -67,7 +71,8 @@ public class UserMapperImpl implements UserMapper{
             name,
             lastname,
             email,
-            phone
+            phone,
+            userEntity.getTickets()
     );
   }
 

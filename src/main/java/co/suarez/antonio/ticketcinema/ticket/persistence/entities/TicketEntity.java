@@ -3,6 +3,7 @@ package co.suarez.antonio.ticketcinema.ticket.persistence.entities;
 import co.suarez.antonio.ticketcinema.common.audit.AuditableEntity;
 import co.suarez.antonio.ticketcinema.movie.persistence.entities.MovieEntity;
 import co.suarez.antonio.ticketcinema.user.persistence.entities.UserEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,6 +32,7 @@ public class TicketEntity extends AuditableEntity {
 
     private LocalDateTime endTime;
 
+    @JsonIgnore
     @JoinColumn(name="user_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER)
     private UserEntity user;

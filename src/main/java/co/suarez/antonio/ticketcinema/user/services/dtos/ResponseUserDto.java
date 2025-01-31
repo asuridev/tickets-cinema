@@ -1,6 +1,9 @@
 package co.suarez.antonio.ticketcinema.user.services.dtos;
 
+import co.suarez.antonio.ticketcinema.ticket.persistence.entities.TicketEntity;
 import lombok.*;
+import java.util.List;
+
 
 
 @Data
@@ -17,7 +20,8 @@ public class ResponseUserDto {
   private String email;
 
   private String phone;
-     
+
+  private List<TicketEntity> tickets;
 }
 
   
