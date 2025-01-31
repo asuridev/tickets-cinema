@@ -24,7 +24,6 @@ public class TicketDto {
 
   private MovieEntity movie;
 
-
 }
 
   

@@ -1,5 +1,6 @@
 package co.suarez.antonio.ticketcinema.movie.services.dtos;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 
@@ -8,14 +9,12 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class CreateMovieDto {
-  private String id;
-
+  @NotNull
   private String title;
-
+  @NotNull
   private String genre;
-
+  @NotNull
   private Double duration;
-     
 }
 
   

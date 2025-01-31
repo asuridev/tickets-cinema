@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  user-service:
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cinema-docker
+    container_name: cinema-container
+    restart: always # reiniciar el contenedor si se detiene
+    ports:
+      - "8000:8000"
+    environment:
+      PROFILE: pdn
+      SERVER_PORT: 8000
+      JWT_SECRET: qwertyuiopasdfghj
+      JWT_TIMEOUT: 60
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: database
+      DB_USER: user
+      DB_PASSWORD: secret
+    # volumes:
+    #   - ./:/var/www/user-db
+
+  db:
+    image: postgres:alpine3.18
+    container_name: postgresticket
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: database
+  

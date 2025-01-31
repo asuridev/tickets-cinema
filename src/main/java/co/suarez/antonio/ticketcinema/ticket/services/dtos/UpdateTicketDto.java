@@ -11,8 +11,6 @@ import java.time.LocalDateTime;
 @Builder
 public class UpdateTicketDto {
 
-  private String id;
-
   private String seat;
 
   private LocalDateTime startTime;

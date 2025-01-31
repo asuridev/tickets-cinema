@@ -5,5 +5,5 @@ build/
 .git
 .gitignore
 Dockerfile
-compose.yaml
+docker-compose.yaml
   

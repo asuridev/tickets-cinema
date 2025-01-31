@@ -8,7 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class UpdateMovieDto {
-  private String id;
 
   private String title;
 
